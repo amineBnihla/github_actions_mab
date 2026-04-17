@@ -2,11 +2,20 @@ name: manual workflow trigger
 
 on:
  workflow_dispatch:
+    inputs:
+      environement:
+        description: 'Log level'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
 
 jobs:
   display-name:
      runs-on: ubuntu-latest
      steps:
        - name: "this workflow need manual trigger"
-         run: echo "Trigger manual"
+         run: echo "Trigger manual ${{inputs.environement}}"
        
