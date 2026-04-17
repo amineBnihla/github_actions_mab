@@ -1,0 +1,16 @@
+name: schedule Workflow
+
+on:
+ schedule:
+   - cron: "45 16 * * 5"
+
+jobs:
+  schedule-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "this message is scheduled everyday at 00:00"
+        run: |
+        echo "this message is running at 00:00"
+        echo "this message is running at 00:00"
+        
+        
