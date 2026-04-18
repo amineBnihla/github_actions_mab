@@ -1,0 +1,13 @@
+name: Trigger api call
+
+on: 
+ repository_dispatch:
+   types:
+     - test_type
+
+jobs:
+  log_message:
+     runs-on: ubuntu-latest
+     steps:
+       - name: show a message
+         run: echo "this api call message"
