@@ -15,6 +15,6 @@ jobs:
               node-version: 20
       - name: job detail specification
         run: |
-          npm ci && npm run build
-          npm run start
+          npm ci && npm run test
+          npm run build
         shell: bash
