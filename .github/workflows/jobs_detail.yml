@@ -7,9 +7,14 @@ jobs:
   job-steps:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+              node-version: 20
       - name: job detail specification
         run: |
           npm ci && npm run build
           npm run start
-        working-directory: ${{ github.workspace }}
         shell: bash
