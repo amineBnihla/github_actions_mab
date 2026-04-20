@@ -1,0 +1,15 @@
+name: Cover the jobs details
+
+on: 
+ workflow_dispatch:
+
+jobs:
+  job-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: job detail specification
+        run: |
+          npm run build
+          npm run start
+        working-directory: ./
+        shell: bash
