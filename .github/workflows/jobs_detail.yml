@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: job detail specification
         run: |
-          npm run build
+          npm ci && npm run build
           npm run start
-        working-directory: ./
+        working-directory: ../../
         shell: bash
