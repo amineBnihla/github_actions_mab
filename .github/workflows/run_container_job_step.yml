@@ -15,3 +15,11 @@ jobs:
            args: /bin/sh -c "echo Hello from Alpine."
        - name: run test in VM
          run: echo "run test in VM."
+
+  job_container:
+       runs-on: ubuntu-latest
+       container:
+         image: node:20
+       steps:
+         - name: check node -v
+           run: node -v
