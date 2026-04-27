@@ -13,5 +13,5 @@ jobs:
        - name: display name
          run: echo "this true $CHECK condition"
        - name: display name
-         if: ${{ env.CHECK == true }}
+         if: ${{ env.CHECK == 'true' }}
          run: echo "this true condition"
