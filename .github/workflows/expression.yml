@@ -11,7 +11,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - name: display name
-         run: echo "this true condition"
+         run: echo "this true $CHECK condition"
        - name: display name
          if: ${{ '$CHECK' == 'true' }}
          run: echo "this true condition"
