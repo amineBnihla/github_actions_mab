@@ -1,0 +1,17 @@
+name: if expression
+
+on:
+ push:
+ pull_request:
+env:
+  CHECK: true
+jobs:
+  job_1:
+     if: ${{github.event_name == 'push'}}
+     runs-on: ubuntu-latest
+     steps:
+       - name: display name
+         run: echo "this true condition"
+       - name: display name
+         if: ${{ '$CHECK' == true }}
+         run: echo "this true condition"
